@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://drhs1gh3fpuri"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_1xak8"]
+[ext_resource type="Texture2D" uid="uid://b8cqsk6dvl6gu" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/environment/Background Layers/background.png" id="2_b2y61"]
+[ext_resource type="Texture2D" uid="uid://cwvtbk2cr88mb" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/environment/Background Layers/middleground.png" id="3_c1sad"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cggsk"]
+load_path = "res://.godot/imported/middleground.png-f72e51e5f8d0b5d752a15c1260cf7f62.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kmx8o"]
+load_path = "res://.godot/imported/middleground.png-f72e51e5f8d0b5d752a15c1260cf7f62.ctex"
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_1xak8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1225.62, 254.551)
+scale = Vector2(12.7747, 2.12263)
+texture = ExtResource("2_b2y61")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(2444, 0)
+
+[node name="Middleground" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(522.2, 329.5)
+scale = Vector2(2.74583, 2.74583)
+texture = ExtResource("3_c1sad")
+
+[node name="Middleground2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1348.4, 330)
+scale = Vector2(2.75, 2.75)
+texture = SubResource("CompressedTexture2D_cggsk")
+
+[node name="Middleground3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2151.6, 334)
+scale = Vector2(2.76667, 2.76667)
+texture = SubResource("CompressedTexture2D_kmx8o")
