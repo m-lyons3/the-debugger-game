@@ -6,6 +6,6 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 # When Play button is pressed
-func _on_play_pressed() -> void:
-	# Changes to starting scene
+
+func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://world.tscn")

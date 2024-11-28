@@ -1,29 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://dos1rr8txsw1e"]
+[gd_scene load_steps=8 format=3 uid="uid://dos1rr8txsw1e"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_nyy80"]
+[ext_resource type="Texture2D" uid="uid://dp724uc5rpodi" path="res://Art and UI/pressed.png" id="2_3lcuf"]
+[ext_resource type="Texture2D" uid="uid://6oltlq3uvvtv" path="res://Art and UI/button.png" id="2_iyd65"]
 [ext_resource type="PackedScene" uid="uid://drhs1gh3fpuri" path="res://bg.tscn" id="2_ps11e"]
+[ext_resource type="Texture2D" uid="uid://dvug5fhj087nd" path="res://Art and UI/buttonhover.png" id="4_iqr0o"]
+[ext_resource type="FontFile" uid="uid://d2biolyd0vhwm" path="res://Art and UI/Poco.ttf" id="5_c2cx4"]
+
+[sub_resource type="Theme" id="Theme_cqlvv"]
+default_font = ExtResource("5_c2cx4")
+default_font_size = 30
+Label/colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
 position = Vector2(4, -3)
 script = ExtResource("1_nyy80")
 
-[node name="play_button" type="Button" parent="."]
-offset_left = 481.0
-offset_top = 252.0
-offset_right = 716.0
-offset_bottom = 352.0
-text = "Play"
-icon_alignment = 1
-
-[node name="quit_button" type="Button" parent="."]
-offset_left = 481.0
-offset_top = 391.0
-offset_right = 716.0
-offset_bottom = 491.0
+[node name="quit_button" type="TextureButton" parent="."]
+offset_left = 820.0
+offset_top = 431.0
+offset_right = 1120.0
+offset_bottom = 731.0
 tooltip_text = "Exit Game"
+texture_normal = ExtResource("2_iyd65")
+texture_pressed = ExtResource("2_3lcuf")
+texture_hover = ExtResource("4_iqr0o")
+
+[node name="quit_label" type="Label" parent="quit_button"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 133.0
+offset_right = 174.0
+offset_bottom = 169.0
+theme = SubResource("Theme_cqlvv")
 text = "Quit"
+horizontal_alignment = 1
 
 [node name="BG" parent="." instance=ExtResource("2_ps11e")]
 
-[connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
+[node name="Camera2D" type="Camera2D" parent="BG"]
+position = Vector2(581, 328)
+
+[node name="play_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 435.0
+offset_right = 318.0
+offset_bottom = 735.0
+texture_normal = ExtResource("2_iyd65")
+texture_pressed = ExtResource("2_3lcuf")
+texture_hover = ExtResource("4_iqr0o")
+
+[node name="start_label" type="Label" parent="play_button"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 133.0
+offset_right = 184.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_c2cx4")
+theme_override_font_sizes/font_size = 30
+text = "Start"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="play_button" to="." method="_on_texture_button_pressed"]
