@@ -1,6 +1,6 @@
 [gd_scene load_steps=83 format=3 uid="uid://b7kxrn6aha622"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_jquks"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_jquks"]
 [ext_resource type="Texture2D" uid="uid://kxte8p1wx1ut" path="res://Sunny Land Collection Files/Assets/Characters/Players/Frog MC/Fall/fallingfrogmc.png" id="2_0t7g6"]
 [ext_resource type="Texture2D" uid="uid://c4ctg1j4ssbs5" path="res://Sunny Land Collection Files/Assets/Characters/Players/Frog MC/Idle/frog2mc-Sheet.png" id="2_wly45"]
 [ext_resource type="Texture2D" uid="uid://c4nmcgmj11de0" path="res://Sunny Land Collection Files/Assets/Characters/Players/Frog MC/Run/frogmcwalk.png" id="3_xn7t8"]

@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dloyvtfxdh44o" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Expansion Pack/Sprites/tree.png" id="19_kdwi3"]
 [ext_resource type="Texture2D" uid="uid://ui74b84le6p4" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/environment/props/sprites/house.png" id="20_deffi"]
 [ext_resource type="Texture2D" uid="uid://bcb54xpwe85jp" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/environment/props/sprites/mushroom-brown.png" id="21_4jkt2"]
-[ext_resource type="PackedScene" uid="uid://02xnws8s5f5p" path="res://Ant.tscn" id="23_t3ygx"]
+[ext_resource type="PackedScene" uid="uid://02xnws8s5f5p" path="res://ant.tscn" id="23_t3ygx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f88y3"]
 texture = ExtResource("2_ntn4i")
@@ -1880,6 +1880,10 @@ sources/14 = SubResource("TileSetAtlasSource_rv0ob")
 
 [node name="World" type="Node2D"]
 
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_drtdy")]
+z_index = 5
+position = Vector2(11, -1)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nh172")
 format = 2
@@ -1896,13 +1900,5 @@ tile_set = SubResource("TileSet_nh172")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("7_pafdj")]
 
-[node name="Player" type="Node2D" parent="."]
-position = Vector2(11, -1)
-
-[node name="Player" parent="Player" instance=ExtResource("1_drtdy")]
-z_index = 5
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Ant" parent="Node2D" instance=ExtResource("23_t3ygx")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("23_t3ygx")]
 position = Vector2(326, -16)
