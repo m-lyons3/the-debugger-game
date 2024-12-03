@@ -160,7 +160,7 @@ shape = SubResource("RectangleShape2D_6alpv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-6, -2)
 sprite_frames = SubResource("SpriteFrames_k05ur")
-animation = &"Death"
+animation = &"Idle"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 

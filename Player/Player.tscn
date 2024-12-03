@@ -682,6 +682,7 @@ speed_scale = 0.5
 position = Vector2(129, -43)
 zoom = Vector2(3, 3)
 limit_left = 0
+limit_right = 783
 limit_bottom = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
